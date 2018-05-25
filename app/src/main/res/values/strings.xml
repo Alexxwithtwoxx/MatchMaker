@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MatchMaker</string>
+    <string name="p_1">P1: 0</string>
+    <string name="score_player">Score: 0</string>
+</resources>
