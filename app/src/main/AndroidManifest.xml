@@ -16,12 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".HowToPlay"></activity>
+        <activity android:name=".PuzzleActivity" />
+        <activity android:name=".HowToPlay" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".GameActivity"></activity>
     </application>
 
 </manifest>
