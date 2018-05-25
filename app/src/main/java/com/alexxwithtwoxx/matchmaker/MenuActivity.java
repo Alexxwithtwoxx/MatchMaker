@@ -10,7 +10,7 @@ public class MenuActivity extends AppCompatActivity {
 
     protected ImageButton buttonPlay;
 
-    protected ImageButton button;
+    protected ImageButton buttonHowTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,21 @@ public class MenuActivity extends AppCompatActivity {
 
 
         buttonPlay = findViewById(R.id.buttonPlay);
+        buttonHowTo = findViewById(R.id.buttonHowTo);
 
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, PuzzleActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+        buttonHowTo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, HowToPlay.class);
                 startActivity(intent);
 
 
