@@ -54,7 +54,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="After the dinosaur eggs in question are matched a pair of fossils will appear & these are from the 3 periods of the mesozoic era those periods being the triassic, jurassic, cretaceous periods."
+        android:text="After the dinosaur eggs in question are matched a pair of fossils will appear and these are from the 3 periods of the mesozoic era those periods being the triassic, jurassic, cretaceous periods."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="16sp"
         app:fontFamily="@font/hanalei_fill"
