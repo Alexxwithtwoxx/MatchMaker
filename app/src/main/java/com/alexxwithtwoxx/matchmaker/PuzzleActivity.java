@@ -128,7 +128,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
             //add points
             if (turn == 1) {
                 playerPoints++;
-                score_player.setText("P1: " + playerPoints);
+                score_player.setText("Score: " + playerPoints);
             }
         }
         else
@@ -155,7 +155,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(PuzzleActivity.this);
         alertDialogBuilder
-                .setMessage("Game Over!\nP1: " + playerPoints)
+                .setMessage("Game Over!\nScore: " + playerPoints)
                 .setCancelable(false)
                 .setPositiveButton("New", new DialogInterface.OnClickListener() {
                     @Override
