@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView score_player;
 
@@ -154,14 +154,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(PuzzleActivity.this);
         alertDialogBuilder
                 .setMessage("Game Over!\nP1: " + playerPoints)
                 .setCancelable(false)
                 .setPositiveButton("New", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), PuzzleActivity.class);
                         startActivity(intent);
                         finish();
                     }
