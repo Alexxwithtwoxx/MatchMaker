@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,7 +23,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
     ImageView iv_11, iv_12, iv_13, iv_14, iv_21, iv_22, iv_23, iv_24, iv_31, iv_32, iv_33, iv_34, iv_41, iv_42, iv_43, iv_44;
 
     //image array
-    Integer[] cardsArray = {101, 102, 103, 104, 201, 202, 203, 204, 301, 302, 303, 304, 401, 402, 403, 404};
+    //Integer[] cardsArray = {101, 102, 103, 104, 201, 202, 203, 204, 301, 302, 303, 304, 401, 402, 403, 404};
 
     int[] numImages;
 
@@ -58,22 +59,26 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
         views.add((ImageView) findViewById(R.id.iv_43));
         views.add((ImageView) findViewById(R.id.iv_44));
 
-        for (int i = 0; i < 8; i++) {
-            views.get(i).setTag("" + i);
-        }
-
-        for (int i = 8; i <16; i++) {
-            views.get(i).setTag("" + (i - 8));
-        }
+        shuffleArray();
 
         //load the card images
         numImages = new int[16];
         frontOfCardsResources();
 
-        Collections.shuffle(Arrays.asList(cardsArray));
-
         for (ImageView v: views) {
             v.setOnClickListener(this);
+        }
+
+    }
+
+    public void shuffleArray(){
+        Collections.shuffle(views);
+        for (int i = 0; i < 8; i++) {
+            views.get(i).setTag("" + i);
+        }
+
+        for (int i = 8; i < 16; i++) {
+            views.get(i).setTag("" + (i - 8));
         }
     }
 
